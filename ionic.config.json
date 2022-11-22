@@ -1,0 +1,7 @@
+{
+  "name": "lemonade-components",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
