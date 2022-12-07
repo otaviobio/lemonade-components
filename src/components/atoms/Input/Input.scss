@@ -1,0 +1,186 @@
+.floating-label-input-container {
+  position: relative;
+
+  input {
+    border: 1px solid #ececec!important;
+    border-radius: 0.5rem;
+    color: #4a4a4a;
+    background-color: #fff;
+    width: 100%;
+    border: none;
+    outline: 0!important;
+    font-size: 1rem;
+    padding: 1rem;
+  }
+
+  :focus-visible {
+    border-color: transparent!important;
+    box-shadow: 0 0 0 2px #FF0083 inset;
+    border-radius: 0.5rem;
+  }
+  
+  label {
+    position: absolute;
+    left: 1rem;
+    font-size: 1rem;
+    transform-origin: top left;
+    transform: translateY(1rem) scale(1);
+    transition: all .1s ease-in-out;
+
+    &.active {
+      transform: translateY(0.25rem) scale(0.75);
+    }
+  }
+
+  span {
+    position: absolute;
+    bottom: -50%;
+    left: 0;
+    font-size: 0.85rem;
+    opacity: 0.5;
+  }
+}
+
+// .custom-radio-button-container {
+//   display: flex;
+//   justify-content: center;
+//   gap: 1rem;
+//   padding: 2rem 0;
+// }
+
+.custom-radio-button {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.5rem;
+  padding: 1rem 4rem 1rem 1rem;
+  background-color: #F7F7F7;
+  border-radius: 0.5rem;
+  
+  input[type="radio"] {
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: #fff;
+    margin: 0;
+    font: inherit;
+    color: currentColor;
+    width: 25px;
+    height: 25px;
+    // border: 1px solid #B7B7B7;
+    border-radius: 50%;
+    padding: 0.2rem;
+
+    display: grid;
+    place-content: center!important;
+
+    &::before {
+      content: "";
+      width: 1em;
+      height: 1em;
+      border-radius: 50%;
+      transform: scale(0);
+      transition: 120ms transform ease-in-out;
+      box-shadow: inset 1em 1em #ff0083;
+    }
+  
+    &:checked {
+      &::before {
+        transform: scale(1);
+      }
+    }
+  }
+}
+
+.floating-label-input-container {
+  width: fit-content;
+  margin: 4rem auto 2rem;
+  p {
+    margin: 0;
+    color: #B7B7B7;
+  }
+}
+
+.custom-input-container {
+  
+  .labels-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+
+    p {
+      margin: 0;
+    }
+
+    :last-child {
+      font-size: 0.85rem;
+      font-weight: 300;
+      letter-spacing: 0.1rem;
+    }
+  }
+
+  label {
+    color: #32302f;
+  }
+
+  input {
+    background-color: #fff;
+    width: 100%;
+    margin-top: 0.8rem;
+    border: 1px solid #ececec;
+    border-radius: 2rem;
+    padding: 1rem 2rem;
+
+    &:focus {
+      outline: none !important;
+    }
+  }
+}
+
+.hasIcon {
+  position: relative;
+
+  span {
+    position: absolute;
+    color: #32302f;
+    top: 45%;
+    left: 20px;
+  }
+}
+
+.hasTooltip {
+  display: flex;
+  gap: 0.5rem;
+  // justify-content: flex-start;
+  align-items: center;
+
+  .tooltip {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: transparent;
+    border: 0px !important;
+    color: #666666;
+    font-size: 14px;
+    position: relative;
+    
+    .tip { 
+      display: none; 
+    }
+    
+    &:hover .tip, .show-tip { 
+      display: inline;
+      color: #54575a;
+      padding: 0.75rem 1.5rem;
+      filter: drop-shadow(0 5px 15px rgba(168,117,117,.2));
+      border-radius: 0.5rem;
+      background-color: #fff;
+      position: absolute;
+      z-index: 1;
+      top: 35px;
+      right: -6rem;
+      min-width: 250px;
+    }
+  }
+}
+
