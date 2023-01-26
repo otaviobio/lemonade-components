@@ -1,10 +1,12 @@
 import { GoogleMap, Marker } from '@react-google-maps/api';
 import { mapStyle } from './mapStyle';
 import './Map.scss'
+import { DirectionMarker } from './Marker/DirectionMarker';
+import customMarker from '../../../assets/marker.svg';
 
 const containerStyle = {
-  width: '580px',
-  height: '120px'
+  width: '100%',
+  height: '120px',
 };
 
 const center = {
@@ -17,14 +19,20 @@ export function Map({markerLocation}) {
   return(
     <GoogleMap
       mapContainerStyle={containerStyle}
-      center={center}
-      zoom={12}
+      center={markerLocation || center}
+      zoom={11}
       options={{
         styles: mapStyle,
         disableDefaultUI: true,
+        disableDoubleClickZoom: true,
+        draggable: false,
       }}
     >
-      {markerLocation && <Marker position={markerLocation} />}
+      {/* {markerLocation && <Marker icon={customMarker} position={markerLocation} />} */}
+      {markerLocation && <DirectionMarker location={markerLocation}/>}
     </GoogleMap>
   )
 }
+
+
+{/* <DirectionMarker location={markerLocation}/> */}

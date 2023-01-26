@@ -1,0 +1,12 @@
+.direction-marker {
+  position: relative;
+
+  img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    width: 2rem;
+    height: 2rem;
+  }
+}

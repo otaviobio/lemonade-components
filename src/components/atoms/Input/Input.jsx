@@ -44,6 +44,7 @@ export function CustomInput({
     <div className={`
       ${floatingLabel ? "floating-label-input-container" : "custom-input-container"}
       ${props.type === "radio" && "custom-radio-button"}
+      ${props.type === "checkbox" && "custom-radio-button custom-checkbox"}
       ${className}
     `}>
       {hasTooltip

@@ -1,0 +1,15 @@
+.quote-page-container {
+  color: #4a4a4a;
+
+  .header-avatar {
+    display: none;
+  }
+
+  .quote-page-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // width: 100%;
+    background-color: rgb(236, 236, 236);
+  }
+}

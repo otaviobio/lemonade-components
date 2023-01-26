@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  color: #4a4a4a;
   
   h2 {
     font-size: 2rem;
@@ -10,83 +11,260 @@
   }
 }
 
-header {
-  display: flex;
-  justify-content: space-between;
+.header-container {
   width: 100%;
-  padding: 1.5rem 22px;
-  border-bottom: 1px #ececec solid;
-  position: relative;
 
-
-  .logo-lemonade {
-    width: 122px;
-    // 92px for mobile devices
-  }
-
-  .header-right-buttons {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-
-    button {
-      background-color: #fff;
-      color: #4a4a4a;
-    }
-
-    .header-menu {
-      display: flex;
-      align-items:flex-end;
-      gap: 4px;
-      font-weight: 700;
-      font-size: 0.95rem;
-
-      ion-icon {
-        font-size: 0.75rem;
-      }
-
-      &::before {
-        content: '';
-        width: 0.6rem;
-        height: 0.6rem;
-        background-color: rgb(42, 213, 189);
-        border-radius: 100%;
-        margin-bottom: 1px;
-      }
-    }
-  }
-
-  ion-icon {
-    font-size: 1.5rem;
-    background-color: #fff;
-    color: #4a4a4a;
-    --ionicon-stroke-width: 2.5rem;
-  }
-
-  .refresh-icon-reverse {
-    font-size: 1.3rem;
-    transform: rotateY(180deg);
-  }
-
-  .header-avatar {
+  .back-button {
     position: absolute;
-    width: 80px;
-    left: 50%;
-    transform: translate(-50%);
-    top: 50%;
+    top: 9rem;
+    
+    // left: -22rem;
+  
+    .with-icon {
+      ion-icon {
+        font-size: 4rem;
+        color: #ececec;
+        background-color: transparent;
+        transition: color 0.2s ease-in-out;
+
+        &:hover {
+          color: #dadada;
+        }
+      }
+    }
   }
 }
 
 // FORM STARTS
  form {
   padding: 2.5rem 2.5rem 0;
- }
+}
+
+article {
+  >div {
+    animation: anything 1s;
+  }
+}
+
+@keyframes anything {
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  100% {
+    opacity: 1;
+  }
+}
 
 .custom-radio-button-container {
   display: flex;
   justify-content: center;
-  gap: 1rem;
+  align-items: center;
+  gap: 5rem;
   padding: 2rem 0;
+
+  .with-svg {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    width: 6rem;
+    white-space:nowrap;
+
+    .svg-container {
+      width: 100%;
+      text-align: center;
+    }
+
+    .custom-svg {
+      fill: #dadada;
+      transition: fill 0.5s ease-in-out;
+    }
+
+    .custom-svg-active {
+      fill: #ce0771;
+      transition: fill 0.5s ease-in-out;
+    }
+    
+    svg, img {
+      height: 6rem;
+      margin-bottom: 0.5rem;
+    }
+    .custom-radio-button {
+      background-color: #fff;
+      flex-direction: column;
+      padding: 0.5rem;
+
+      p {
+        font-size: 1.2rem;
+        font-weight: 700;
+      }
+    }
+  }
+}
+
+.pill-radio-button-container {
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+  background-color: #fff;
+  width: fit-content;
+  margin: 5rem auto 3rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1px;
+  justify-items: center;
+  border-radius: 3rem;
+  position: relative;
+  border: 2px solid rgb(236, 236, 236);
+
+  .pill-divider {
+    position: absolute;
+    border-right: 1px solid #DEDEDE;
+    top: 15%;
+    // left: 50%;
+    transform: translate(-50%);
+    background-color: #dadada;
+    width: 1px;
+    height: 3rem;
+    margin: auto;
+    overflow: hidden;
+  }
+
+  .custom-radio-button {
+    position: relative;
+    background-color: transparent;
+    border-radius: 3rem;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem 2rem;
+    transition: all 0.4s ease-in-out;
+    p {
+      color: #dadada;
+    }
+
+    #petBreed {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      cursor: pointer;
+    }
+  }
+
+  .pill-inactive {
+    p {
+      color: #4a4a4a;
+    }
+  }
+
+  .pill-active {
+    box-shadow: 0px 0px 0px 2px #CE0771;
+    background-color: rgb(255, 228, 242);
+    // transform: translateX(100%);
+    // transition-duration: 1s;
+    // transform: translateX(0);
+    p {
+      color: #CE0771;
+    }
+  }
+
+  .pill-active2 {
+    box-shadow: 0px 0px 0px 2px #CE0771;
+    background-color: rgb(255, 228, 242);
+    // transform: translateX(100%);
+    // transition-duration: 1s;
+    // transform: translateX(0);
+    
+    p {
+      color: #CE0771;
+    }
+  }
+
+  .left-test {
+    animation: left-to-right 0.3s ease;
+  }
+
+  .right-test {
+    animation: right-to-left 0.3s ease;
+  }
+
+  @keyframes left-to-right {
+    100% {
+      transform: translateX(-100%);
+    }
+    80% {
+      // transform: translateX(-50%);
+    }
+    50% {
+      transform: translateX(0);
+    }
+    20% {
+    }
+    0% {
+      // box-shadow:none;
+      // background-color: transparent;
+    }
+  }
+
+  @keyframes right-to-left {
+    100% {
+      transform: translateX(100%);
+    }
+    80% {
+      // transform: translateX(50%);
+    }
+    50% {
+      transform: translateX(0);
+    }
+    20% {
+    }
+    0% {
+      // box-shadow:none;
+      // background-color: transparent;
+    }
+  }
+
+}
+
+.step-container {
+  .floating-label-input-container {
+    width: 11.1rem;
+  }
+}
+
+.age-step-container {
+  // padding: 0 10rem;
+  // width: min-content;
+  .floating-label-input-container {
+    width: 19.2rem;
+    margin-bottom: 1rem;
+  }
+
+  .custom-radio-button-container {
+    gap: 1rem;
+    padding-top: 0;
+    padding-bottom: 3rem;
+  }
+}
+
+.breed-step-container {
+  // padding: 0 10rem;
+  // width: min-content;
+  .floating-label-input-container {
+    width: 24rem;
+    margin: 2rem auto;
+  }
+
+  .custom-radio-button-container {
+    gap: 1rem;
+    padding-top: 0;
+    padding-bottom: 3rem;
+  }
 }
 
 .address-step-container {
@@ -98,7 +276,7 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: min-content;
+  max-width: 580px;
 
   .address-inputs-container {
     width: fit-content;
@@ -111,5 +289,199 @@ header {
       width: 100%;
       margin: 1rem 0 3rem;
     }
+
+    .main-address {
+      display: flex;
+      align-items: center;
+      height: fit-content;
+      margin-top: 1rem;
+      position: relative;
+
+      .pin {
+        position: absolute;
+        z-index:1;
+        bottom: 30%;
+        left: 10px;
+      }
+      
+      .close-button {
+        position: absolute;
+        right: 1rem;
+      }
+
+      .floating-label-input-container {
+        margin: 0;
+
+        input {
+          padding-left: 2.2rem;
+        }
+
+        label {
+          left: 2.2rem;
+        }
+      }
+
+      ion-icon {
+        font-size: 1rem;
+        color: #dadada;
+      }
+
+      img {
+        width: 1.2rem;
+      }
+    }
+  }
+}
+
+.summary-container {
+  background-color: rgb(247, 247, 247);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+  max-width: 35rem;
+  margin: 3rem auto 2rem;
+  padding: 2rem 3rem;
+  border-radius: 0.5rem;
+
+  .summary-item-label {
+    font-size: 0.75rem;
+    color: rgb(183, 183, 183);
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  .summary-item-value {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-top: 5px;
+  }
+}
+
+// Media queries
+@media only screen and (max-width: 480px) {
+  .header-container {
+
+    header {
+      padding: 0.5rem 20px;
+    }
+
+    .back-button {
+      display: none;
+    }
+  }
+
+  .insurance-onboarding-section {
+    h2 {
+      font-size: 1.5rem;
+      padding: 0;
+      text-align: center;
+    }
+  }
+
+  form {
+    padding: 1rem;
+  }
+
+  .floating-label-input-container {
+    margin: 2rem auto 1rem!important;
+    width: 100%!important;
+  }
+
+  .form-buttons {
+    width: 92%;
+    padding: 1.4rem!important;
+  }
+
+  .pet-type-h2 {
+    padding: 0 2rem!important;
+  }
+
+  .address-step-container {
+    width: 100vw;
+    padding: 0 1rem;
+  }
+
+  .address-step-container {
+    h2 {
+      padding: 0;
+      margin: 3rem 0;
+    }
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: min-content;
+  
+    .address-inputs-container {
+      width: 92vw;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+  
+      .floating-label-input-container {
+        width: 100%!important;
+        margin: 0!important;
+      }
+  
+      .main-address {
+        display: flex;
+        align-items: center;
+        height: fit-content;
+        margin-top: 1rem;
+        position: relative;
+  
+        .pin {
+          position: absolute;
+          z-index:1;
+          bottom: 30%;
+          left: 10px;
+        }
+        
+        .close-button {
+          position: absolute;
+          right: 1rem;
+        }
+  
+        .floating-label-input-container {
+          margin: 0;
+  
+          input {
+            padding-left: 2.2rem;
+          }
+  
+          label {
+            left: 2.2rem;
+          }
+        }
+  
+        ion-icon {
+          font-size: 1rem;
+          color: #dadada;
+        }
+  
+        img {
+          width: 1.2rem;
+        }
+      }
+    }
+  }
+
+  .age-step-container {
+    .custom-radio-button-container {
+      // gap: 1rem;
+      justify-content: space-between;
+    }
+  }
+
+  .pill-radio-button-container {
+    .custom-radio-button {
+      p {
+        font-size: 0.7rem;
+      }
+    }
+  }
+
+  .map-mobile {
+    width: 92vw!important;
   }
 }

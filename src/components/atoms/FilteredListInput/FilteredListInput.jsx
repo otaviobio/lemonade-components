@@ -1,5 +1,5 @@
 import './FilteredListInput.scss'
-import { useState } from 'react';
+import { Fragment, useState } from 'react';
 import { forwardRef, memo } from 'react';
 
 export function CustomFilteredListInput({
@@ -15,8 +15,8 @@ export function CustomFilteredListInput({
   list = [],
   icon,
   inputValue,
-  // renderItem,
-  // keyExtractor,
+  renderItem,
+  keyExtractor,
   ...props
 }, ref) {
 
@@ -83,14 +83,19 @@ export function CustomFilteredListInput({
       }
       {focusedElement === true && 
         <ul className="floating-label-select">
-          {list.map((listItem) => {
+          {renderItem && list && list.map(item => (
+            <Fragment key={keyExtractor(item)}>
+              {renderItem(item)}
+            </Fragment>
+          ))}
+          {/* {list.map((listItem) => {
             if(listItem !== undefined) {
               return(
                 <li key={listItem} onMouseDown={() => handleListItemClick(listItem)}>{listItem}</li>
               )
             }
             return null
-          })}
+          })} */}
         </ul>
       }
     </div>

@@ -1,0 +1,198 @@
+.health-issues-hub {
+  color: #4a4a4a;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  max-width: 600px;
+
+  h2 {
+    padding: 0;
+  }
+
+  .health-issues-main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    max-width: 300px;
+    // padding: 0 1rem;
+
+    header {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      padding: 0;
+      border: none;
+      position: relative;
+      max-width: 600px;
+
+      // .carousel {
+      //   position: relative;
+      //   width: 100%;
+        
+      //   .carousel-track-container {
+      //     width: 100%;
+      //     background-color: red;
+      //     display: flex;
+      //     gap: 0.5rem;
+      //     // flex-grow: 1;
+      //     // transform: translateX(-33%);
+
+      //     .carousel-slide {
+      //       max-width: 33.33%;
+      //       white-space: nowrap;
+      //       flex: 0 0 33.33%;
+      //       background-color: gray;
+      //       text-align: center;
+      //     }
+      //   }
+
+      // }
+
+      // .carousel-swiper-container {
+      //   width: 100%;
+      //   padding: 1rem 0;
+      //   color: #4a4a4a;
+      
+      //   .swiper {
+      //     // overflow: visible;
+      //   }
+
+      //   .swiper-slide {
+      //     display: flex;
+      //     align-items: center;
+      //     justify-content: center;
+      //     // padding: 0 1rem;
+      //     white-space: nowrap;
+
+      //   width: fit-content;
+      //   }
+
+      //   .swiper-slide-active {
+      //     // margin: 0 1rem;
+      //   }
+
+      //   .swiper-slide-prev, .swiper-slide-next {
+      //     // overflow: hidden;
+      //   }
+
+      //   .swiper-slide-next {
+      //     // justify-content: flex-start;
+      //   }
+
+      //   .carousel-swiper-slide {
+      //     // width: 100%;
+      //   }
+      // }
+
+      // .swiper {
+      //   width: 100%;
+      //   // overflow: visible;
+
+      //   .swiper-slide {
+      //     display: flex;
+      //     align-items: center;
+      //     justify-content: center;
+      //     white-space: nowrap;
+      //     width: max-content!important;
+      //   }
+
+      // }
+
+      // .carousel-parent {
+      //  width: 100%;
+      //  overflow-x: hidden;   
+      // }
+
+      // .carousel-container {
+      //   display: flex;
+      //   width: 100%;
+      //   // overflow-x: hidden;
+      //   gap: 0.5rem;
+        
+      //   &.first-slide {
+      //     // transform: translateX(25%);
+      //     transition: all 0.5s ease-in-out;
+      //   }
+
+      //   // transform: translateX(-75%);
+      //   transition: all 0.5s ease-in-out;
+        
+      //   .carousel-slide {
+      //     width: 100%;
+      //     display: flex;
+      //     align-items: center;
+      //     justify-content: center;
+      //     white-space: nowrap;
+      //     min-width: 50%;
+      //     background-color: gray;
+
+      //     // &.prev {
+      //     //   justify-content: flex-start;
+      //     // }
+
+      //     // &.next {
+      //     //   justify-content: flex-end;
+      //     // }
+          
+      //     &.active {
+      //       // min-width: 33%;
+      //       span {
+      //         color: red;
+      //       }
+      //     }
+
+      //     &.active:last-child {
+      //       min-width: 50%;
+      //     }
+      //   }
+      // }
+
+      .carousel-parent {
+        width: 100%;
+        overflow-x: auto;
+        
+        .carousel-container {
+          width: 100%;
+          display: grid;
+          grid-auto-flow: column;
+          grid-auto-columns: max-content;
+          gap: 1rem;
+          // margin-left: 300px;
+        }
+      }
+
+
+      .progress-bar-container {
+        width: 100%;
+        height: 0.3rem;
+        background-color: #d3d3d3;
+        border-radius: 1rem;
+      }
+    }
+
+    main, footer {
+      width: 100%;
+    }
+
+    footer {
+      .btn-container {
+        width: 100%;
+      }
+    }
+  }
+
+  .health-issues-options {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+}

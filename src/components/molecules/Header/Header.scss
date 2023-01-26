@@ -1,0 +1,124 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 1.5rem 22px;
+  border-bottom: 1px #ececec solid;
+  position: relative;
+
+  .back-button {
+    position: absolute;
+    top: 9rem;
+    
+    // left: -22rem;
+  
+      .with-icon {
+        ion-icon {
+          font-size: 4rem;
+          color: #ececec;
+          background-color: transparent;
+          transition: color 0.2s ease-in-out;
+
+          &:hover {
+            color: #dadada;
+          }
+        }
+      }
+    }
+
+  .logo-lemonade {
+    width: 122px;
+    // 92px for mobile devices
+  }
+
+  .header-right-buttons {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    button {
+      background-color: #fff;
+      color: #4a4a4a;
+    }
+
+    .header-menu {
+      display: flex;
+      align-items:flex-end;
+      gap: 4px;
+      font-weight: 700;
+      font-size: 0.95rem;
+
+      ion-icon {
+        font-size: 0.75rem;
+      }
+
+      &::before {
+        content: '';
+        width: 0.6rem;
+        height: 0.6rem;
+        background-color: rgb(42, 213, 189);
+        border-radius: 100%;
+        margin-bottom: 1px;
+      }
+    }
+  }
+
+  ion-icon {
+    font-size: 1.5rem;
+    background-color: #fff;
+    color: #4a4a4a;
+    --ionicon-stroke-width: 2.5rem;
+  }
+
+  .refresh-icon-reverse {
+    font-size: 1.3rem;
+    transform: rotateY(180deg);
+  }
+
+  .header-avatar {
+    position: absolute;
+    width: 80px;
+    left: 50%;
+    transform: translate(-50%);
+    top: 50%;
+  }
+}
+
+// Media queries
+@media only screen and (max-width: 480px) {
+  header {
+    padding: 0.5rem 20px;
+  
+    .back-button {
+      display: none;
+    }
+  
+    .logo-lemonade {
+      width: 92px;
+    }
+  
+    .header-right-buttons {
+      gap: 1rem;
+  
+      .header-menu {
+  
+        ion-icon {
+          font-size: 0.75rem;
+        }
+  
+        &::before {
+          width: 0.5rem;
+          height: 0.5rem;
+        }
+      }
+    }
+  
+    ion-icon {
+      font-size: 1.3rem;
+    }
+
+    .header-avatar {
+      width: 40px;
+    }
+  }
+}
