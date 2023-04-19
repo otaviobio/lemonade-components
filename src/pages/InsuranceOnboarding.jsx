@@ -392,6 +392,7 @@ export function InsuranceOnboarding() {
 
   return (
     <FormContext.Provider value={{ formData, setFormData, next }}>
+      <span>{process.env.REACT_APP_TEST || "Sem variavel"}</span>
       <section className="insurance-onboarding-section">
         <div className="header-container">
           <Header />

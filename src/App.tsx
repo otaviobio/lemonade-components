@@ -55,6 +55,7 @@ const App: React.FC = () => {
   if (!isLoaded) {
     return null;
   }
+  console.log(process.env.REACT_APP_GOOGLE_MAP_API_KEY)
   return (
     <IonApp>
       <IonReactRouter>
