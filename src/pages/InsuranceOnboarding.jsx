@@ -1,10 +1,5 @@
 import "./InsuranceOnboarding.scss";
-import lemonadeLogo from "../assets/lemonade-insurance-logo.svg";
-import avatar from "../assets/avatar.jpg";
 import {
-  refreshOutline,
-  helpCircleOutline,
-  caretDownSharp,
   chevronBack,
   close,
 } from "ionicons/icons";
@@ -86,7 +81,7 @@ export function InsuranceOnboarding() {
     loadAsync();
   }, [debouncedAddress]);
 
-  const { steps, currentStepIndex, step, isFirstStep, isLastStep, back, next } =
+  const { currentStepIndex, step, isFirstStep, isLastStep, back, next } =
     useMultiSteps([
       <article className="step-container">
         <h2>Can't wait to meet your furry friend. What's their name?</h2>
@@ -392,7 +387,6 @@ export function InsuranceOnboarding() {
 
   return (
     <FormContext.Provider value={{ formData, setFormData, next }}>
-      <span>{process.env.REACT_APP_TEST || "Sem variavel"}</span>
       <section className="insurance-onboarding-section">
         <div className="header-container">
           <Header />

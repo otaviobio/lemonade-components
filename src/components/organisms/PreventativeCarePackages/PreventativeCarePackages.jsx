@@ -1,5 +1,5 @@
 import { IonIcon } from "@ionic/react";
-import { checkmark, checkmarkCircle } from "ionicons/icons";
+import { checkmark } from "ionicons/icons";
 import { useState } from "react";
 import { preventativeCarePackagesData } from "../../../data/preventativeCarePackagesData";
 import { Input } from "../../atoms/Input/Input";
