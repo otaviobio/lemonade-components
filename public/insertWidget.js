@@ -91,11 +91,11 @@ function initialize(params) {
 
     const style = `
     *{
-      z-index: 999999999999999999999999999999;
       font-family: Arial, Helvetica, sans-serif!important;
     }
       .fab-button {
         position: fixed;
+        z-index: 999999999999999999999999999999;
         bottom: 20px;
         right: 20px;
         width: 50px;
@@ -153,6 +153,7 @@ function initialize(params) {
       
       .link-list {
         position: fixed;
+        z-index: 999999999999999999999999999999;
         bottom: 60px;
         right: 20px;
         padding: 20px 32px 20px 20px;
