@@ -33,8 +33,6 @@ export function HealthIssuesHub({petName}) {
     parentNext();
   }
 
-  console.log("Health Hub Data: ", healthHubData);
-
   const { steps, currentStepIndex, step, isFirstStep, isLastStep, back, next } =
     useMultiSteps(
       healthIssues.map(({ slug, issues }) => {

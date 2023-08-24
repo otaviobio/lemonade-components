@@ -30,11 +30,8 @@ export function InsuranceOnboarding() {
   const [breedTypeInputValue, setBreedTypeInputValue] = useState("");
   const [addressesList, setAddressesList] = useState([]);
   const [addressGeoCode, setAddressGeoCode] = useState(null);
-  console.log(formData);
-  console.log(formData.petBreed);
 
   const debouncedAddress = useDebounce(formData.address ?? "", 500);
-  console.log(debouncedAddress);
 
   const handleChange = (e) => {
     setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
@@ -180,7 +177,6 @@ export function InsuranceOnboarding() {
                 hasIcon={true}
                 iconName={close}
                 type="button"
-                onClick={() => console.log("close this")}
               />
             </div>
           </div>
@@ -382,8 +378,6 @@ export function InsuranceOnboarding() {
         return false;
     }
   };
-
-  console.log(formData.petsAge === "" && formData.petType === "");
 
   return (
     <FormContext.Provider value={{ formData, setFormData, next }}>
